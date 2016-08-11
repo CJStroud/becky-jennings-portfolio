@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <div class="test">
+          <div>Hello!</div>
+          <div>My name is Becky.</div>
+          <div>I <span class="fa fa-heart"></span> to make music.</div>
+        </div>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-item-link" href="#music">Music</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-item-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container">
+        <h2 id="music">My music</h2>
+        <p>This is my music</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 id="about">A bit about me</h2>
+        <p>This is the bit about me</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <h2 id="contact">Get in touch</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <a href="mailto:becky.jennings@example.com">Send me an email</a>
+      </div>
+    </section>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <script>
+    SC.initialize({
+      client_id: 'YOUR_CLIENT_ID'
+    });
+
+    // stream track id 293
+    SC.stream('/tracks/293').then(function(player){
+      player.play();
+    });
+    </script>
+  </body>
+</html>
