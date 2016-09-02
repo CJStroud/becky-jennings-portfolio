@@ -10,6 +10,7 @@ html {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .hero-title {
@@ -25,7 +26,7 @@ h1 {
 }
 
 nav {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(255, 255, 255, .4);
   display: inline-block;
 }
 
@@ -98,8 +99,10 @@ nav {
   color: #fff;
   font-size: 40px;
   margin: 0;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 30px;
+  text-align: center;
+
 }
 
 .test div {
@@ -133,4 +136,10 @@ h2 {
   color: #4a4a4a;
   font-size: 24px;
   letter-spacing: 2px;
+}
+
+.absolute-top-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
