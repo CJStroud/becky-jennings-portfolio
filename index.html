@@ -48,6 +48,9 @@
       </div>
 
       <div class="js-player player player-hidden">
+        <div class="progress-container">
+          <div class="progress"></div>
+        </div>
         <div class="container">
           <audio src=""  controls class="js-audio"></audio>
           <button class="js-pause"><span class="fa fa-pause"></span></button>
@@ -81,7 +84,7 @@
     <script>
 
       var clientId = '5d45ca1b3ca462fbca4106a7c6120547';
-      var userId = 'smaav'; // 'beckyjennings-1';
+      var userId = 'beckyjennings-1';
 
       var trackList = [];
 
@@ -99,8 +102,13 @@
         console.log(stream.duration);
       };
 
+      var progress = document.querySelector('.progress');
+
       stream.addEventListener('timeupdate', function () {
-        console.log(((stream.currentTime / stream.duration) * 100).toFixed(2) + '%');
+        var percentage = ((stream.currentTime / stream.duration));
+        console.log(percentage);
+        progress.style.transform = 'scaleX(' + percentage + ')';
+
       });
 
       var player = document.querySelector('.js-player');
