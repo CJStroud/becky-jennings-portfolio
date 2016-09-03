@@ -143,3 +143,72 @@ h2 {
   top: 20px;
   right: 20px;
 }
+
+.two-col {
+  display: flex;
+}
+
+.two-col .col {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+
+.two-col .col:first-of-type {
+  margin-right: 75px;
+}
+
+.artwork {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('https://i1.sndcdn.com/artworks-000178263875-m01ffq-t500x500.jpg');
+  background-size: cover;
+  transition: background .3s;
+  position: relative;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+}
+
+/**
+ * Track
+ */
+.track-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.track {
+  padding: 6px 0;
+  margin-bottom: 12px;
+}
+
+.track-btn {
+  background-color: #fff;
+  color: #95a5a6;
+  border-radius: 50%;
+  border: 0;
+  padding: 0;
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  padding: 16px;
+  transition: transform 230ms;
+}
+
+.player-hidden {
+  transform: translateY(103%);
+}
